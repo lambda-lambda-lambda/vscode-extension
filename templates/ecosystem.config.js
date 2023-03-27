@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    script: '.devcontainer/server.js',
+    script: '{{appName}}/node_modules/lambda-edge-server/server.js --handler {{appName}}/src/app.js',
     error_file : '.devcontainer/error.log',
     out_file : '.devcontainer/debug.log',
     watch: ['{{appName}}/src'],

@@ -10,6 +10,7 @@
     "{{sdkPackage}}": "latest",
     "eslint": "latest",
     "jsdoc": "latest",
+    "lambda-edge-server": "latest",
     "swagger-jsdoc": "latest"
   },
   "scripts": {
