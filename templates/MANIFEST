@@ -1,6 +1,5 @@
 .devcontainer/devcontainer.json
 .devcontainer/ecosystem.config.js
-.devcontainer/server.js
 .eslintrc
 .gitignore
 {{appName}}/.npmignore
