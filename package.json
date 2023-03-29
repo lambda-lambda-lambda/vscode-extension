@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nuxy/vscode-lambda-lambda-lambda.git"
+    "url": "git+https://github.com/lambda-lambda-lambda/vscode-extension.git"
   },
   "keywords": [
     "lambda-lambda-lambda",
@@ -23,9 +23,9 @@
     "extension"
   ],
   "bugs": {
-    "url": "https://github.com/nuxy/vscode-lambda-lambda-lambda/issues"
+    "url": "https://github.com/lambda-lambda-lambda/vscode-extension/issues"
   },
-  "homepage": "https://github.com/nuxy/vscode-lambda-lambda-lambda#readme",
+  "homepage": "https://github.com/lambda-lambda-lambda/vscode-extension#readme",
   "author": "Marc S. Brooks <devel@mbrooks.info> (https://mbrooks.info)",
   "license": "MIT",
   "dependencies": {
