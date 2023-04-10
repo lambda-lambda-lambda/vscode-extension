@@ -1,8 +1,8 @@
 # vscode-lambda-lambda-lambda
 
-VS Code [extension](https://marketplace.visualstudio.com/VSCode) to create a new [L³](https://github.com/nuxy/lambda-lambda-lambda) application.
+VS Code [extension](https://marketplace.visualstudio.com/VSCode) to create a new [L³](https://github.com/lambda-lambda-lambda) application.
 
-![Command Palette](https://raw.githubusercontent.com/nuxy/vscode-lambda-lambda-lambda/master/package.gif)
+![Command Palette](https://raw.githubusercontent.com/lambda-lambda-lambda/vscode-extension/master/package.gif)
 
 ## Dependencies
 
