@@ -1,9 +1,0 @@
-version = 0.1
-[default]
-[default.deploy]
-[default.deploy.parameters]
-stack_name = "{{cfResourceName}}"
-s3_bucket = "aws-sam.functions"
-s3_prefix = "cloudFormationStack-{{cfResourceName}}"
-region = "us-east-1"
-capabilities = "CAPABILITY_IAM CAPABILITY_NAMED_IAM"

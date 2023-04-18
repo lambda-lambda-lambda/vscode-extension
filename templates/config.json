@@ -1,9 +1,0 @@
-{
-  "origin": {
-    "siteUrl": "https://domain.com"
-  },
-  "router": {
-    "prefix": "{{appPrefix}}"
-  },
-  "development": true
-}

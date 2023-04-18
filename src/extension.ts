@@ -7,27 +7,29 @@
  *  http://www.opensource.org/licenses/mit-license.php
  */
 
-import {commands, window, ExtensionContext, Uri} from 'vscode';
+import {commands, window, workspace, ExtensionContext, Uri} from 'vscode';
+
+// @ts-ignore
+import {createFile, createFiles} from '@lambda-lambda-lambda/cli';
 
 // Local modules
 import {AppConfig, InputBoxOpts, QuickPickOpts} from './types';
-import {createFile, createFiles}                from './generator';
 
 /*
  * Activate the VS Code extension.
  */
 export function activate(context: ExtensionContext) {
   context.subscriptions.push(
-    createApp(context),
-    createResource(context, 'Middleware'),
-    createResource(context, 'Route')
+    createApp(),
+    createResource('Middleware'),
+    createResource('Route')
   );
 }
 
 /**
  * Create new L³ application options.
  */
-function createApp(context: ExtensionContext) {
+function createApp() {
   return commands.registerCommand('lambda-lambda-lambda.createApp', async () => {
     const inputBoxTitle = 'L³: Create new application';
 
@@ -90,7 +92,9 @@ function createApp(context: ExtensionContext) {
     if (description && name && prefix && asynchronous && timeout && sdkVersion) {
       const appConfig: AppConfig = {description, name, asynchronous, prefix, timeout, sdkVersion};
 
-      createFiles(appConfig, context.extensionPath);
+      await createFiles(appConfig, getWorkspace());
+
+      window.showInformationMessage('Created application sources.');
     } else {
       window.showErrorMessage('Failed to create application sources.');
     }
@@ -100,7 +104,7 @@ function createApp(context: ExtensionContext) {
 /**
  * Create new L³ application resource.
  */
-function createResource(context: ExtensionContext, type: string) {
+function createResource(type: string) {
   return commands.registerCommand(`lambda-lambda-lambda.create${type}`, async (uri: Uri) => {
     const inputBoxTitle = 'L³: Create new application resource';
 
@@ -116,7 +120,9 @@ function createResource(context: ExtensionContext, type: string) {
 
     // Generate file from template.
     if (name) {
-      createFile(name, context.extensionPath, uri.path);
+      await createFile(name, uri.path);
+
+      commands.executeCommand('workbench.files.action.refreshFilesExplorer');
     } else {
       window.showErrorMessage(`Failed to create ${type} resource`);
     }
@@ -171,4 +177,12 @@ function promptQuickPick(opts: QuickPickOpts): Promise<any> {
 
     quickPick.show();
   });
+}
+
+/**
+ * Return the Workspace root path.
+ */
+function getWorkspace(): string | undefined {
+  return (workspace.workspaceFolders)
+    ? workspace.workspaceFolders[0].uri.fsPath : undefined;
 }

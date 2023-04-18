@@ -34,14 +34,3 @@ export interface AppConfig {
   timeout: string,
   sdkVersion: string
 }
-
-export interface TemplateVars {
-  appDescription?: AppConfig['description'],
-  appName?: AppConfig['name'],
-  appPrefix?: AppConfig['prefix'],
-  appTimeout?: AppConfig['timeout'],
-  pkgName?: string,
-  sdkPackage?: string,
-  cfResourceName?: string,
-  routePath?: string
-}
