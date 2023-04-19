@@ -46,9 +46,9 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:lambda-lambda-lambda.createApp",
-    "onCommand:lambda-lambda-lambda.createMiddleware",
-    "onCommand:lambda-lambda-lambda.createRoute"
+    "onCommand\\:lambda-lambda-lambda.createApp",
+    "onCommand\\:lambda-lambda-lambda.createMiddleware",
+    "onCommand\\:lambda-lambda-lambda.createRoute"
   ],
   "contributes": {
     "commands": [
@@ -83,12 +83,12 @@
       "explorer/context": [
         {
           "command": "lambda-lambda-lambda.createMiddleware",
-          "when": "explorerResourceIsFolder && resource =~ //src/middleware/",
+          "when": "explorerResourceIsFolder && resource =~ /\\/src\\/middleware/",
           "group": "lambda-lambda-lambda"
         },
         {
           "command": "lambda-lambda-lambda.createRoute",
-          "when": "explorerResourceIsFolder && resource =~ //src/routes/",
+          "when": "explorerResourceIsFolder && resource =~ /\\/src\\/routes/",
           "group": "lambda-lambda-lambda"
         }
       ]
