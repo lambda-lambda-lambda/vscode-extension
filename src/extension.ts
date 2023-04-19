@@ -120,7 +120,7 @@ function createResource(type: string) {
 
     // Generate file from template.
     if (name) {
-      await createFile(name, uri.path);
+      await createFile(name, uri.path, getWorkspace());
 
       commands.executeCommand('workbench.files.action.refreshFilesExplorer');
     } else {
