@@ -1,4 +1,4 @@
-# vscode-lambda-lambda-lambda
+# L³ VS Code extension
 
 VS Code [extension](https://marketplace.visualstudio.com/VSCode) to create a new [L³](https://github.com/lambda-lambda-lambda) application.
 
