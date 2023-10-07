@@ -89,9 +89,18 @@ function createApp() {
       step: 6
     });
 
+    const runtime: string | undefined = await promptQuickPick({
+      placeHolder: 'Node.js Lambda runtime identifier',
+      title: inputBoxTitle,
+      items: [{label: 'nodejs16.x'}, {label: 'nodejs18.x'}],
+      step: 7
+    });
+
     // Generate sources from templates.
-    if (description && name && prefix && asynchronous && timeout && sdkVersion) {
-      const appConfig: AppConfig = {description, name, asynchronous, prefix, timeout, sdkVersion};
+    if (description && name && prefix && asynchronous && timeout && sdkVersion && runtime) {
+      const appConfig: AppConfig = {
+        description, name, asynchronous, prefix, timeout, sdkVersion, runtime
+      };
 
       await createFiles(appConfig, getWorkspace());
 
