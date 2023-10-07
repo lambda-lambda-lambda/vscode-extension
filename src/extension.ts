@@ -11,9 +11,10 @@ import {commands, window, workspace, ExtensionContext, Uri} from 'vscode';
 
 // @ts-ignore
 import {createFile, createFiles} from '@lambda-lambda-lambda/cli';
+import {AppConfig}               from '@lambda-lambda-lambda/cli/src/types';
 
 // Local modules
-import {AppConfig, InputBoxOpts, QuickPickOpts} from './types';
+import {InputBoxOpts, QuickPickOpts} from './types';
 
 /*
  * Activate the VS Code extension.

@@ -25,12 +25,3 @@ export interface QuickPickOpts {
   items: QuickPickItem[],
   step?: number
 }
-
-export interface AppConfig {
-  description: string,
-  name: string,
-  asynchronous: string,
-  prefix: string,
-  timeout: string,
-  sdkVersion: string
-}
