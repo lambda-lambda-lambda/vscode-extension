@@ -85,14 +85,14 @@ function createApp() {
     const sdkVersion: string | undefined = await promptQuickPick({
       placeHolder: 'AWS SDK for JavaScript version',
       title: inputBoxTitle,
-      items: [{label: '2'}, {label: '3'}],
+      items: [{label: '3'}, {label: '2'}],
       step: 6
     });
 
     const runtime: string | undefined = await promptQuickPick({
       placeHolder: 'Node.js Lambda runtime identifier',
       title: inputBoxTitle,
-      items: [{label: 'nodejs16.x'}, {label: 'nodejs18.x'}],
+      items: [{label: 'nodejs20.x'}, {label: 'nodejs18.x'}],
       step: 7
     });
 
