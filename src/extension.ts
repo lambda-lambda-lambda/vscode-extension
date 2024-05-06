@@ -192,7 +192,7 @@ function promptQuickPick(opts: QuickPickOpts): Promise<any> {
 /**
  * Return the Workspace root path.
  */
-function getWorkspace(): string | undefined {
+function getWorkspace(): string {
   return (workspace.workspaceFolders)
-    ? workspace.workspaceFolders[0].uri.fsPath : undefined;
+    ? workspace.workspaceFolders[0].uri.fsPath : './';
 }
