@@ -9,9 +9,8 @@
 
 import {commands, window, workspace, ExtensionContext, Uri} from 'vscode';
 
-// @ts-ignore
-import {createFile, createFiles} from '@lambda-lambda-lambda/cli/index.js';
-import {AppConfig}               from '@lambda-lambda-lambda/cli/index';
+import {createFile, createFiles} from '@lambda-lambda-lambda/cli';
+import {AppConfig}               from '@lambda-lambda-lambda/types/cli';
 
 // Local modules
 import {InputBoxOpts, QuickPickOpts} from './types';
