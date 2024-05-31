@@ -64,12 +64,12 @@ function createApp() {
       step: 3
     });
 
-    const asynchronous: string | undefined = await promptQuickPick({
+    const asynchronous: boolean | undefined = (await promptQuickPick({
       placeHolder: 'Use asynchronous handler?',
       title: inputBoxTitle,
       items: [{label: 'Yes'}, {label: 'No'}],
       step: 4
-    });
+    }) === 'Yes');
 
     const timeout: string | undefined = await promptInputBox({
       placeHolder: 'Function timeout (in seconds)',
