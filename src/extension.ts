@@ -141,8 +141,8 @@ function createResource(type: string) {
 /**
  * Create a new InputBox instance.
  */
-function promptInputBox(opts: InputBoxOpts): Promise<any> {
-  return new Promise((resolve, reject) => {
+function promptInputBox(opts: InputBoxOpts): Promise<umknown> {
+  return new Promise(resolve => {
     const inputBox = window.createInputBox();
     inputBox.placeholder = opts.placeHolder;
     inputBox.title       = opts.title;
@@ -170,8 +170,8 @@ function promptInputBox(opts: InputBoxOpts): Promise<any> {
 /**
  * Create a new QuickPick instance.
  */
-function promptQuickPick(opts: QuickPickOpts): Promise<any> {
-  return new Promise((resolve, reject) => {
+function promptQuickPick(opts: QuickPickOpts): Promise<unknown> {
+  return new Promise(resolve => {
     const quickPick = window.createQuickPick();
     quickPick.placeholder = opts.placeHolder;
     quickPick.title       = opts.title;
