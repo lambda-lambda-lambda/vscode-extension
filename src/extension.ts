@@ -91,7 +91,7 @@ function createApp() {
     const runtime: string | undefined = await promptQuickPick({
       placeHolder: 'Node.js Lambda runtime identifier',
       title: inputBoxTitle,
-      items: [{label: 'nodejs20.x'}, {label: 'nodejs18.x'}],
+      items: [{label: 'nodejs22.x'}, {label: 'nodejs20.x'}, {label: 'nodejs18.x'}],
       step: 7
     });
 
