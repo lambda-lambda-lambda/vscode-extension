@@ -1,4 +1,4 @@
-# L³ VS Code extension [![NO AI](https://raw.githubusercontent.com/nuxy/no-ai-badge/master/badge.svg)](https://github.com/nuxy/no-ai-badge)
+# L³ VS Code extension [![NO AI](https://raw.githubusercontent.com/nuxy/no-ai-badge/master/badge.png)](https://github.com/nuxy/no-ai-badge)
 
 VS Code [extension](https://marketplace.visualstudio.com/VSCode) to create a new [L³](https://github.com/lambda-lambda-lambda) application.
 
